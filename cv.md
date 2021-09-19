@@ -7,3 +7,4 @@
 ## Courses: none completed, i expect Stage 1 of RS School to be my first completed course
 ## Education: university completed :)
 ## English: B2
+## Interests: games
