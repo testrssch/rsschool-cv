@@ -5,11 +5,23 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Andrey Krivosheev CV</title>
   </head>
   <body>
     <header>
-      <h3>CV Andrey Krivosheev</h3>
+      <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">CV Andrey Krivosheev</a>
+        <a href="#Experience">Experience</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Education">Education</a>
+        <a href="#Code Examples">Code Examples</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </header>
     <div id="mainblock">
       <aside>
@@ -23,7 +35,7 @@
       </nav>
       </aside>
       <main>
-        <section>
+        <section id='Experience'>
           <h4>Experience:</h4>
           <p>No professional programming experience. Work authorization: Spain, Russia.</p>
         </section>
@@ -31,7 +43,7 @@
           <h4>Code examples:</h4>
           <p>Some code examples of mine <a href="https://github.com/testrssch">https://github.com/testrssch</a></p>
         </section>
-        <section>
+        <section id="Skills">
           <h4>Skills:</h4>
           <p>General knowledge of</p>
           <ul>
@@ -41,9 +53,9 @@
           </ul>
           <p>I use VS Code with plugins and light solar theme (looks like caramel with a twist).</p>
         </section>
-        <section>
+        <section id="Education">
           <h4>Education:</h4>
-          <p>Basic <a href="https://hexlet.io">Hexlet courses</a>, basic <a href="https://htmlacademy.ru/">HTML Academy courses</a>. I try to learn every day (preferrable when kids are at school)</p>
+          <p>Basic <a href="https://hexlet.io">Hexlet courses</a>, basic <a href="https://htmlacademy.ru/">HTML Academy courses</a>. I try to learn every day (preferrably when kids are at school)</p>
         </section>
         <section>
           <h4>Human Languages:</h4>
@@ -52,6 +64,32 @@
         <section>
           <h4>Why:</h4>
           <p>I decided to become expert programmer. I've been working as the copyright lawyer for 20 years and got very tired of my work.</p>
+        </section>
+        <section id="Code Examples">
+          <h4>Code examples:</h4>
+          <p>Given an array of integers, your function bubblesortOnce should return a new array equivalent to performing exactly 1 complete pass on the original array. Your function should be pure, i.e. it should not mutate the input array.</p>
+            <code>
+              function bubblesortOnce(arr) {
+                let newArr = arr.slice();
+                for (let i = 0; i < newArr.length - 1; i++) {
+                  if (newArr[i] > newArr[i + 1]) {
+                    [newArr[i], newArr[i + 1]] = [newArr[i + 1], newArr[i]];
+                  }
+                }
+                return newArr;
+              }
+            </code>
+        </section>
+        <section>
+          <h4>My Projects:</h4>
+          <article>
+            <p>Javascript task</p>
+            <a href="https://github.com/testrssch/human-readable-number"><img class="project" src="hrn-project.png" alt="human readable number project foto"></a>
+          </article>
+        </section>
+        <section>
+          <h4>Video resume</h4>
+          <iframe width="200" height="315" src="https://www.youtube.com/embed/xkdM35bTVmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
       </main>
       <aside>
@@ -72,5 +110,15 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
   </body>
 </html>
